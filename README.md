@@ -17,10 +17,12 @@ pointer fields (`*string`), there is actually a fourth case that is not called o
 * the field is not specified in the JSON.
 
 If we use the common pointer field in the struct (`Field *string`) if the field does not exist
-in the JSON, the object is unmarshaled but collapsed to `null`.
+in the JSON, the object is unmarshaled but collapsed to `null`.  This approach mirrors the idea
+from the [database/sql NULL](https://pkg.go.dev/database/sql#Null) types.
 
 ### PATCH
 Being able to distinguish if a "field does not exist" vs "field exists and is set to null" is
 especially import for HTTP PATCH.  _Explicitly_ specifying the value as `null` may have a different
 semantic meaning (e.g. "reset to default") different from _explicitly_ not including the field 
 (e.g. "do not change").
+
