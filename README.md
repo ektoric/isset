@@ -1,3 +1,10 @@
+> [!WARNING]
+> DEPRECATED!  This package is Deprecated!
+> This package was created pre-1.18 generics (despite its commit date).
+> Since then, packages like [niljson](https://github.com/wneessen/niljson), 
+> [monad](https://github.com/samber/mo) `Option[T]`, and probably others have since arrived using generics.
+
+
 ## isset
 
 `isset` is a library with the ability to JSON unmarshal while knowing if a field existed in the JSON
